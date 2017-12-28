@@ -6,13 +6,15 @@
 package com.accenture.j2c.bookingcar.domain.repository;
 import java.util.Collection;
 
+import com.accenture.j2c.bookingcar.domain.entity.Order;
+
 /**
  *
  * @author darren.shuxing.liu
  * @param <Order>
  * @param <String>
  */
-public interface OrderRepository<Order, String> extends Repository<Order, String> {
+public interface OrderRepository<TE extends Order, String> extends Repository<TE, String> {
 
     /**
      *

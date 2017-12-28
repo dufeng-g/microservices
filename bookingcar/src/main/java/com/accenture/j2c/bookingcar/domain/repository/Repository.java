@@ -5,6 +5,7 @@
  */
 package com.accenture.j2c.bookingcar.domain.repository;
 
+import com.accenture.j2c.bookingcar.domain.entity.Entity;
 
 /**
  *
@@ -12,7 +13,7 @@ package com.accenture.j2c.bookingcar.domain.repository;
  * @param <TE>
  * @param <T>
  */
-public interface Repository<TE, T> extends ReadOnlyRepository<TE, T> {
+public interface Repository<TE extends Entity, T> extends ReadOnlyRepository<TE, T> {
 
     /**
      *

@@ -5,6 +5,7 @@
  */
 package com.accenture.j2c.bookingcar.domain.service;
 
+import com.accenture.j2c.bookingcar.domain.entity.Entity;
 import com.accenture.j2c.bookingcar.domain.repository.Repository;
 import java.util.Collection;
 /**
@@ -13,7 +14,7 @@ import java.util.Collection;
  * @param <TE>
  * @param <T>
  */
-public abstract class BaseService<TE, T> extends ReadOnlyBaseService<TE, T> {
+public abstract class BaseService<TE extends Entity<T>, T> extends ReadOnlyBaseService<TE, T> {
 
     private Repository<TE, T> _repository;
 

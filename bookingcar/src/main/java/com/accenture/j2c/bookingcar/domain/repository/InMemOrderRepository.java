@@ -5,16 +5,17 @@
  */
 package com.accenture.j2c.bookingcar.domain.repository;
 
-import com.accenture.j2c.bookingcar.domain.entity.Order;
-import com.accenture.j2c.bookingcar.domain.entity.Entity;
+import java.math.BigDecimal;
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
-import java.time.LocalDate;
-import java.time.LocalTime;
-import java.math.BigDecimal;
+
 import org.springframework.stereotype.Repository;
+
+import com.accenture.j2c.bookingcar.domain.entity.Order;
 /**
  *
  * @author darren.shuxing.liu
@@ -91,7 +92,7 @@ public class InMemOrderRepository implements OrderRepository<Order, String> {
      * @return
      */
     @Override
-    public Entity get(String id) {
+    public Order get(String id) {
         return entities.get(id);
     }
 

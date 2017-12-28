@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package com.accenture.j2c.bookingcar.domain.service;
+import com.accenture.j2c.bookingcar.domain.entity.Entity;
 import com.accenture.j2c.bookingcar.domain.repository.Repository;
 
 /**
@@ -12,7 +13,7 @@ import com.accenture.j2c.bookingcar.domain.repository.Repository;
  * @param <TE>
  * @param <T>
  */
-public abstract class ReadOnlyBaseService<TE, T> {
+public abstract class ReadOnlyBaseService<TE extends Entity<T>, T> {
 
     private Repository<TE, T> repository;
 

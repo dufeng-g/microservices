@@ -87,7 +87,7 @@ public class InMemUserRepository implements UserRepository<User, String> {
      * @return
      */
     @Override
-    public Entity get(String id) {
+    public User get(String id) {
         return entities.get(id);
     }
 
